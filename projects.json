@@ -55,5 +55,33 @@
     "order": 30,
     "source": "agency",
     "cover": "https://raw.githubusercontent.com/zaleo-dev/portfolio-data/main/covers/planlens.png"
+  },
+  {
+    "slug": "frugal-router",
+    "name": "Frugal Router",
+    "tagline": "Cheapest model per LLM request that clears the quality bar",
+    "summary": "frugal-router classifies each LLM prompt on local signals — token estimate, JSON/table structure, task-type keywords, few-shot count, history depth — and maps it to an economy, standard, or premium model tier with a confidence score. A routing policy enforces a monthly budget cap, latency SLO, and confidence floor, walking fallback chains under budget pressure and logging each decision with tier, reason, remaining budget, and SLO flag. OpenAI and Anthropic adapters return per-call cost and latency telemetry, and a benchmark harness prices an always-premium baseline against the routed policy over a JSONL eval set.",
+    "highlights": [
+      "Classifier maps prompts to a tier with confidence; ~50 µs p95 against a 5 ms budget, ≥ 90% accuracy on 101 labeled prompts.",
+      "Routing policy enforces a monthly budget cap, latency SLO, and quality floor; every decision is logged and replayable.",
+      "OpenAI and Anthropic adapters record cost and latency on every call, with injectable httpx transports.",
+      "Benchmark replays the eval set, always-premium vs routed: 55.7% savings and 0% regression on simulated outcomes with mock-tier pricing."
+    ],
+    "stack": [
+      "Python",
+      "uv",
+      "httpx",
+      "pytest",
+      "ruff",
+      "pyright"
+    ],
+    "kind": "library",
+    "year": "2026",
+    "status": "prototype",
+    "role": "Solo",
+    "links": {},
+    "home": true,
+    "order": 30,
+    "source": "agency"
   }
 ]
