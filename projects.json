@@ -25,5 +25,35 @@
     "home": true,
     "order": 30,
     "source": "agency"
+  },
+  {
+    "slug": "planlens",
+    "name": "PlanLens",
+    "tagline": "Postgres plan analysis in-browser: hotspot tree + index DDL",
+    "summary": "PlanLens turns a pasted Postgres EXPLAIN (ANALYZE, FORMAT JSON) plan into an interactive tree with per-node timing, ranked findings and copyable CREATE INDEX DDL. Hotspots are ranked by exclusive time, misestimation magnitude and sort/hash spills, and index suggestions derive from filters, sort keys and join conditions, each with a rationale and a check-with-EXPLAIN caveat. Parsing, analysis and share links run entirely client-side, so plans containing real data never leave the machine.",
+    "highlights": [
+      "Normalizes 50+ node types into a tree; exclusive time is derived by subtracting children's inclusive time.",
+      "Quantifies row-estimate drift per node as a signed log ratio between planner estimate and actual rows.",
+      "Generates CREATE INDEX DDL with equality-before-range-before-sort column order, partial and expression indexes, and prefix deduplication.",
+      "Flags filtered Seq Scans, sort and hash spills, dead branches, nested-loop misestimates, and trigger or JIT time."
+    ],
+    "stack": [
+      "TypeScript",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui"
+    ],
+    "kind": "web",
+    "year": "2026",
+    "status": "live",
+    "role": "Solo",
+    "links": {
+      "live": "https://planlens.zaleo.dev"
+    },
+    "home": true,
+    "order": 30,
+    "source": "agency",
+    "cover": "https://raw.githubusercontent.com/zaleo-dev/portfolio-data/main/covers/planlens.png"
   }
 ]
