@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "slug": "retrieval-ratchet",
+    "name": "Retrieval Ratchet",
+    "tagline": "Deterministic retrieval eval that gates merges in CI",
+    "summary": "Retrieval Ratchet makes retrieval quality a merge gate for RAG applications. A seeded generator derives QA sets from the corpus itself with no LLM calls, a pluggable retriever protocol feeds a metric engine computing recall@k, MRR, precision@k, and lexically-grounded faithfulness, and `check` exits non-zero when results fall below a checked-in baseline. It runs offline in seconds inside GitHub Actions, with byte-identical QA output for a given seed.",
+    "highlights": [
+      "Seeded synthetic-QA generator derives questions from the corpus itself — no LLM calls, byte-identical output per seed.",
+      "Metric engine computes recall@k, MRR, precision@k, and lexically-grounded faithfulness, stable run-to-run.",
+      "Regression gate compares against a checked-in baseline with float-noise tolerance; the exit code is the merge gate.",
+      "Retriever protocol needs only retrieve(query, k); TF-IDF and HTTP adapters pass a shared contract suite covering determinism and unicode queries."
+    ],
+    "stack": [
+      "Python",
+      "uv",
+      "pytest",
+      "GitHub Actions",
+      "TF-IDF"
+    ],
+    "kind": "cli",
+    "year": "2026",
+    "status": "prototype",
+    "role": "Solo",
+    "links": {},
+    "home": true,
+    "order": 30,
+    "source": "agency"
+  }
+]
