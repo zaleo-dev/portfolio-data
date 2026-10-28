@@ -83,5 +83,34 @@
     "home": true,
     "order": 30,
     "source": "agency"
+  },
+  {
+    "slug": "raft-lab-browser",
+    "name": "Raft Lab",
+    "tagline": "Crash nodes, partition a simulated cluster, and watch Raft election and replicat",
+    "summary": "Distributed-systems students and interview candidates read the Raft paper but never see elections, term fencing and log reconciliation happen; existing visualizers are canned animations you cannot break, so the failure modes never become intuitive.",
+    "highlights": [
+      "The hard part is a deterministic, tick-driven Raft implementation (elections, log replication, commit rules) that is also the engine driving the UI, plus property-based tests proving safety invariants (at most one leader per term, election restriction, log matching, committed-prefix) across thousands of random crash/partition scenarios; success is measured by those invariants holding under fuzzing and by the UI replaying any failing seed step by step."
+    ],
+    "stack": [
+      "TypeScript",
+      "React",
+      "Vite",
+      "Tailwind",
+      "shadcn/ui",
+      "vitest",
+      "fast-check"
+    ],
+    "kind": "web",
+    "year": "2026",
+    "status": "live",
+    "role": "Solo",
+    "links": {
+      "live": "https://raft-lab-browser.zaleo.dev"
+    },
+    "home": true,
+    "order": 30,
+    "source": "agency",
+    "cover": "https://raw.githubusercontent.com/zaleo-dev/portfolio-data/main/covers/raft-lab-browser.png"
   }
 ]
